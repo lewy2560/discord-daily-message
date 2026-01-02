@@ -1,4 +1,4 @@
-name: Discord Daily Message
+name: Daily Message
 
 on:
   schedule:
