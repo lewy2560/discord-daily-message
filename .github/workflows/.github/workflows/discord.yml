@@ -1,0 +1,16 @@
+name: Discord Daily Message
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # 8:00 czasu polskiego (UTC+2)
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord message
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{"content":"MIŁEGO DNIA WARIATY MOJE"}' \
+         https://discord.com/api/webhooks/1456446760489848997/aZcpv1sPm90PWBEzHeU4RndG6vsuW-sHa02MugFT324VtbbBE6cn-EJl-ck7F2zGo9T6
